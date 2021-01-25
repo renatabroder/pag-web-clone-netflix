@@ -1,0 +1,220 @@
+/* base */
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #FFFFFF;
+}
+
+.container{
+    margin-left: 2.5rem;
+}
+
+
+/* cabecalho */
+header{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+header .logo{
+    /* color: var(--vermelho); */
+    /* font-family: 'Arial Black', Times; */
+    /* font-size: 40px; */
+    margin-left: 0.8rem;
+    margin-right: 2rem;
+    width: 6rem;
+}
+
+.container .menu-esq{
+    display: flex;
+    align-items: center;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 0.9em;
+    margin-right: 1rem;
+}
+
+header nav a:hover{
+    color: #AAA;
+    transition: 0.7s ease all;
+}
+
+.menu-dir{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.botao-menu{
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    color: #FFFFFF;
+    margin-left: 2rem;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.infantil{
+    font-size: 0.9em;
+}
+
+.usuario{
+    display: flex;
+    align-items: center;
+
+}
+
+.avatar{
+    background-image: url('./images/profile.jpeg');
+    height: 2.5rem;;
+    width: 2.5rem;
+    background-size: cover;
+    border-radius: 3px;
+    margin-right: 0.6em;
+}
+
+
+
+/* filme principal */
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%), url('./images/viva-capa.jpg');
+
+    height: 30rem;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .container{
+    width: 40vw;
+}
+
+.filme-principal .descricao{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filme-principal .titulo{
+    font-size: 2.3em;
+}
+
+.botao{
+    padding: 0.7rem 1.3rem;
+    margin-right: 0.5rem;
+
+    font-size: 1em;
+    font-weight: 800;
+
+    cursor: pointer;
+    border: 0px;
+    border-radius: 4px;
+    outline: none;
+
+    transition: .3s ease all;
+}
+
+.botoes .assistir{
+    background-color: #FFFFFF;
+    color: var(--preto);
+}
+
+.botoes .assistir:hover{
+    background-color: rgb(179, 179, 179);
+}
+
+.botoes .mais-info{
+    background-color: rgba(255,255,255,.35);
+    color: #FFFFFF;
+}
+
+.botoes .mais-info:hover{
+    background-color: rgba(255,255,255,.15);
+}
+
+.botao i{
+    margin-right: 0.5rem;
+}
+
+
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.label{
+    margin-bottom: 0.5rem;
+    margin-left: 0.1rem;
+}
+
+.carrossel-filmes{
+    margin-top: 1rem;
+}
+
+.carrossel-series{
+    margin-top: 2rem;
+}
+
+.item img{
+    border-radius: 3px;;
+}
+
+
+/* responsividade */
+@media(max-width: 1024px){
+    .filme-principal .container{
+        width: 70vw;
+    }
+}
+
+@media(max-width: 890px){
+    
+    body{
+        width: 890px;
+        max-width: 890x;
+    }
+    header{
+        width: 890px;
+        max-width: 890x;
+    }
+    header nav{
+        max-width: 270px;
+    }
+
+}
+
+@media(max-width: 650px){
+    .filme-principal .container{
+        width: 95vw;
+    }
+}
