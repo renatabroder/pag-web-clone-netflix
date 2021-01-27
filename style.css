@@ -314,6 +314,11 @@ header nav button:nth-child(1){
     .filme-principal{
         font-size: 13px;
     }
+
+    #search-field {
+        max-width: 12rem;
+        width: 13rem;
+    }
 }
 
 
@@ -394,8 +399,8 @@ header nav button:nth-child(1){
 
 @media(max-width: 650px){
     body{
-        width: 650px;
-        min-width: 650px;
+        width: 600px;
+        min-width: 600px;
     }
     .filme-principal .container{
         min-width: 217px;
