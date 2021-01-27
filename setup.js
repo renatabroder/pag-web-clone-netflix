@@ -5,7 +5,7 @@ $('.owl-carousel').owlCarousel({
     dots:false,
     responsive:{
         0:{
-            items:1
+            items:3
         },
         600:{
             items:4
@@ -39,7 +39,6 @@ searchButton = (() =>{
     let campoVisivel = $('#search-field').css('max-width') == '0px' ? false : true;
     let valCampo = $('#search-field').val()
 
-    console.log(campoVisivel)
     if(!campoVisivel){
         $('#search-field').removeClass('hide');
         $('.search-bar').removeClass('hide');

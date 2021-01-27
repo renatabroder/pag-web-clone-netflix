@@ -78,6 +78,7 @@ header nav button:nth-child(1){
 .menu-dir{
     display: flex;
     align-items: center;
+    margin-left: 0;
 }
 
 .botao-menu-nav{
@@ -393,14 +394,21 @@ header nav button:nth-child(1){
         font-size: 0.7em;
         margin-right: 0;
     }
+
+    #search-field {
+        max-width: 10rem;
+        width: 11rem;
+    }
 }
 
-
-
-@media(max-width: 650px){
+@media(max-width: 600px){
     body{
         width: 600px;
         min-width: 600px;
+    }
+    header .container{
+        width: 540px;
+        min-width: 540px;
     }
     .filme-principal .container{
         min-width: 217px;
