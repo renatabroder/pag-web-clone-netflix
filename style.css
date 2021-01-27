@@ -16,6 +16,14 @@ body{
     color: #FFFFFF;
 }
 
+button{
+    outline: none;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
 .container{
     margin-left: 2.5rem;
 }
@@ -26,6 +34,7 @@ header{
     height: 4.5rem;
     display: flex;
     align-items: center;
+    background-color: transparent;
     
 }
 
@@ -40,8 +49,8 @@ header .logo{
     /* color: var(--vermelho); */
     /* font-family: 'Arial Black', Times; */
     /* font-size: 40px; */
-    margin-left: 0.8rem;
-    margin-right: 2rem;
+    /* margin-left: 0.8rem; */
+    margin-right: 1.5rem;
     width: 6rem;
 }
 
@@ -50,32 +59,76 @@ header .logo{
     align-items: center;
 }
 
-header nav a{
+header nav button{
     text-decoration: none;
     color: #FFF;
     font-size: 0.9em;
     margin-right: 1rem;
 }
 
-header nav a:hover{
+header nav button:hover{
     color: #AAA;
     transition: 0.7s ease all;
+}
+
+header nav button:nth-child(1){
+    font-weight: bolder;
 }
 
 .menu-dir{
     display: flex;
     align-items: center;
-    margin-right: 2rem;
+}
+
+.botao-menu-nav{
+    display: none;
 }
 
 .botao-menu{
-    background-color: transparent;
-    border: 0px;
-    outline: none;
     color: #FFFFFF;
-    margin-left: 2rem;
+    margin-right: 2rem;
     font-size: 1.1em;
-    cursor: pointer;
+}
+
+.botao-search{
+    font-size: 1.1em;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)100%);
+    border: 1px solid white;
+    padding-left: 0.5rem;
+}
+
+.search-bar.hide{
+    border: 0px;
+    background: transparent;
+}
+
+#search-field{
+    max-width: 14rem;
+    width: 15rem;
+    height: 2rem;
+    outline: none;
+    border: 0px;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: transparent;
+    color: #FFFFFF;
+    
+    transition: 0.4s ease all;
+    overflow: hidden;
+}
+
+#search-field.hide{
+    max-width: 0;
+    padding: 0;
+    border: 0px;
+    margin-left: 0rem;
+    pointer-events: none;
 }
 
 .infantil{
@@ -90,8 +143,8 @@ header nav a:hover{
 
 .avatar{
     background-image: url('./images/profile.jpeg');
-    height: 2.5rem;;
-    width: 2.5rem;
+    height: 2.3rem;;
+    width: 2.3rem;
     background-size: cover;
     border-radius: 3px;
     margin-right: 0.6em;
@@ -104,7 +157,8 @@ header nav a:hover{
     font-size: 16px;
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%), url('./images/viva-capa.jpg');
 
-    height: 30rem;
+    margin-top: -4.5rem;
+    height: 30rem; 
     background-size: cover;
 
     display: flex;
@@ -165,7 +219,6 @@ header nav a:hover{
 }
 
 
-
 .box-filme{
     height: 100%;
     width: 100%;
@@ -191,30 +244,160 @@ header nav a:hover{
 
 
 /* responsividade */
-@media(max-width: 1024px){
-    .filme-principal .container{
-        width: 70vw;
-    }
-}
-
-@media(max-width: 890px){
+@media(max-width: 1200px){
     
-    body{
-        width: 890px;
-        max-width: 890x;
-    }
     header{
-        width: 890px;
-        max-width: 890x;
+        height: 4.1rem;
     }
-    header nav{
-        max-width: 270px;
+
+    .botao-menu {
+        margin-right: 1.7em;
+        font-size: 1em;
+    }
+
+    .search-bar {
+        margin-right: 1.7rem;
+    }
+
+    .infantil {
+        font-size: 0.8em;
+    }
+
+    header nav button {
+        text-decoration: none;
+        color: #FFF;
+        font-size: 0.8em;
+        margin-right: 1em;
     }
 
 }
+
+/* responsividade */
+@media(max-width: 1100px){
+    header{
+        height: 3.7rem;
+    }
+
+    .botao-menu {
+        margin-right: 1.4rem;
+        font-size: 0.9em;
+    }
+
+    .search-bar {
+        margin-right: 1.4rem;
+    }
+    
+    .infantil {
+        display: none;
+    }
+    
+    header nav button {
+        font-size: 0.7em;
+        margin-right: 1rem;
+    }
+}
+
+@media(max-width: 950px){
+    header{
+        height: 3.3rem;
+    }
+
+    header .logo{
+        margin-right: 1.2rem;
+        width: 5.5rem;
+    }
+
+    .filme-principal .titulo {
+        font-size: 2em;
+    }
+
+    .filme-principal{
+        font-size: 13px;
+    }
+}
+
+
+
+@media(max-width: 850px){
+    header{
+        height: 3rem;
+    }
+
+    header .logo{
+        margin-right: 1.2rem;
+        width: 5rem;
+    }
+
+    .botao-menu {
+        margin-right: 1.2rem;
+        font-size: 0.7em;
+    }
+
+    .search-bar {
+        margin-right: 1.2rem;
+    }
+    
+    .infantil {
+        display: none;
+    }
+    
+    header nav button {
+        font-size: 0.6em;
+        margin-right: 1rem;
+    }
+
+    .botoes{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .botoes .botao{
+        width: 13rem;
+    }
+
+    .botoes .assistir{
+        margin-bottom: 1rem;
+    }
+
+    .botao-menu-nav{
+        display: flex;
+        /* align-items: center; */
+    }
+
+    .botao-menu-nav i{
+        margin-left: 0.5rem;
+        margin-top: -0.07rem;
+    }
+
+    #menu-nav{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        top: 3rem;
+        left: 6.3rem;
+
+        background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)100%);
+        border-top: 1px solid #FFFFFF;
+
+    }
+    .item-menu{
+        padding: 0.7rem 3rem;
+        font-size: 0.7em;
+        margin-right: 0;
+    }
+}
+
+
 
 @media(max-width: 650px){
-    .filme-principal .container{
-        width: 95vw;
+    body{
+        width: 650px;
+        min-width: 650px;
     }
-}
+    .filme-principal .container{
+        min-width: 217px;
+    }
+} 
